@@ -80,6 +80,7 @@ export default function AdminRegisterPage() {
           }),
         }
       );
+    
 
       const data = await response.json();
 
@@ -95,7 +96,8 @@ export default function AdminRegisterPage() {
         password: "",
         confirmPassword: "",
       });
-    } catch (error) {
+    } catch (error:any) {
+      console.log(error.response)
       setError(
         error instanceof Error
           ? error.message
@@ -154,7 +156,7 @@ export default function AdminRegisterPage() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
+              className="w-full rounded-lg border text-muted border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
             />
           </div>
 
@@ -194,7 +196,7 @@ export default function AdminRegisterPage() {
               value={formData.password}
               onChange={handleChange}
               placeholder="Enter password"
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
+              className="w-full rounded-lg border text-muted border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
             />
           </div>
 
@@ -214,7 +216,7 @@ export default function AdminRegisterPage() {
               value={formData.confirmPassword}
               onChange={handleChange}
               placeholder="Confirm password"
-              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
+              className="w-full rounded-lg border text-muted border-gray-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"
             />
           </div>
 
