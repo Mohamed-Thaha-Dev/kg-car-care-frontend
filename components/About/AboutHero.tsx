@@ -87,7 +87,7 @@ export default function AboutHero() {
           alt="KG Car Service Workshop"
           fill
           priority
-          className="object-cover opacity-50"
+          className="object-cover opacity-70"
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black  to-transparent" />

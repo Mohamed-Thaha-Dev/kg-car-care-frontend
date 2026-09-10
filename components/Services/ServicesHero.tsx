@@ -83,11 +83,11 @@ export default function   ServicesHero() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="/home/homesimg.webp"
+          src="/home/service-hero.webp"
           alt="KG Car Care Services"
           fill
           priority
-          className="object-cover"
+          className="object-cover opacity-70"
         />
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/60  to-transparent " />
