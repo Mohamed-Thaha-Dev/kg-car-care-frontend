@@ -291,20 +291,20 @@ export function Hero() {
 
             <div
               data-hero
-              className="mt-8 flex flex-wrap gap-8"
+              className="mt-8 flex flex-row flex-wrap gap-8"
             >
               <Button
                 title="Explore Services"
                 href="/services"
                 variant="primary"
-                size="lg"
+               
               />
 
               <Button
                 title="Enquiry"
                 href="/contact"
                 variant="outline"
-                size="lg"
+                
               />
             </div>
           </div>
@@ -313,7 +313,7 @@ export function Hero() {
 
           <dl
             data-hero
-            className="grid grid-cols-3 gap-6 sm:gap-10"
+            className="grid grid-cols-3 gap-2 lg:gap-10"
           >
             {stats.map((s) => (
               <div

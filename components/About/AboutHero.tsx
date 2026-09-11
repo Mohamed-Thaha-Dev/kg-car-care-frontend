@@ -133,7 +133,7 @@ export default function AboutHero() {
 
           {/* Buttons */}
 
-          <div className="hero-buttons mt-10 flex flex-wrap gap-4">
+          <div className="hero-buttons mt-10 flex   gap-4">
             <Button title="Book a Service" href="/contact" variant="primary" />
 
             <Button

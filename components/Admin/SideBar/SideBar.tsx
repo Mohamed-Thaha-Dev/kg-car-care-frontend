@@ -49,7 +49,7 @@ toast.success(response.data?.message)
     <>
       {/* Mobile Header */}
 
-      <header className="flex items-center inset-x-0 justify-between border-b fixed bg-white p-4 lg:hidden">
+      <header className="flex items-center inset-x-0 justify-between border-b fixed z-50 bg-white p-4 lg:hidden">
         {/* <h1 className="font-bold">
           KG Car Services
         </h1> */}

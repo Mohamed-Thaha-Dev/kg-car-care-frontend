@@ -96,7 +96,7 @@ export default function   ServicesHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-32 lg:px-8 lg:pb-24">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-30 lg:px-8 lg:pb-24">
         <div className="max-w-4xl">
           <div className="services-hero-label mb-6 flex items-center gap-3">
             <span className="h-px w-12 bg-red-600" />

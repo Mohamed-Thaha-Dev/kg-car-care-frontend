@@ -26,7 +26,7 @@ export default function Cards({
         {/* Top */}
         <div className="flex items-center justify-between">
 
-          <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 ">
+          <span className="text-xs uppercase tracking-[0.2em]  ">
             {title}
           </span>
 
@@ -45,7 +45,7 @@ export default function Cards({
             {value}
           </div>
 
-          <p className="mt-3 text-sm text-neutral-500">
+          <p className="mt-3 text-sm">
             {description}
           </p>
 

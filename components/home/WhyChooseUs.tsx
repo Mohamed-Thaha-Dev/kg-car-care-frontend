@@ -300,36 +300,6 @@ export default function WhyChooseUs() {
             STATS
         ===================================================== */}
 
-        {/* <div className="mt-20 border-t border-white/10 pt-10 md:mt-28">
-
-          <div className="grid grid-cols-1 divide-y divide-white/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-
-            {stats.map((stat) => (
-
-              <div
-                key={stat.label}
-                className="why-stat py-6 sm:px-8 sm:py-0 first:sm:pl-0 last:sm:pr-0"
-              >
-
-                <div className="flex items-end justify-between sm:block">
-
-                  <span className="text-4xl font-black tracking-tight md:text-5xl">
-                    {stat.value}
-                  </span>
-
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 sm:mt-3 sm:block">
-                    {stat.label}
-                  </span>
-
-                </div>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div> */}
         <div className="about-cards  mt-15 grid gap-4 md:grid-cols-3">
           {Experience.map((card, index) => (
             <Cards key={index} {...card} />

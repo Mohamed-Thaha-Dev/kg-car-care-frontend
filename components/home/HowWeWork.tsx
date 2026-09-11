@@ -54,7 +54,7 @@ export default function Process() {
         
           
 
-          <h2 className="text-5xl font-bold text-muted uppercase lg:text-8xl md:6xl font-heading">
+          <h2 className="text-5xl font-bold text-muted uppercase lg:text-8xl md:7xl font-heading">
             How We <span className="text-primary">Work</span> 
           </h2>
            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted md:text-base">
@@ -84,7 +84,7 @@ export default function Process() {
           ))}
         </div>
 
-        <div className="lg:col-span-6 hidden md:block">
+        <div className="lg:col-span-6 hidden lg:block">
           <div className="sticky top-30 aspect-[4/3] overflow-hidden bg-surface">
             {processSteps.map((s, i) => (
               <Image

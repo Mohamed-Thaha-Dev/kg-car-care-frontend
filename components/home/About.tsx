@@ -58,9 +58,7 @@ export default function AboutSection() {
       // ========================================
 
       if (headingRef.current) {
-        const headingLines = Array.from(
-          headingRef.current.children
-        );
+        const headingLines = Array.from(headingRef.current.children);
 
         gsap.fromTo(
           headingLines,
@@ -79,7 +77,7 @@ export default function AboutSection() {
               start: "top 70%",
               toggleActions: "play none none reverse",
             },
-          }
+          },
         );
       }
 
@@ -91,7 +89,6 @@ export default function AboutSection() {
         gsap.fromTo(
           imageRef.current,
           {
-            
             x: 80,
             opacity: 0,
           },
@@ -106,7 +103,7 @@ export default function AboutSection() {
               start: "top 75%",
               toggleActions: "play none none reverse",
             },
-          }
+          },
         );
 
         // ======================================
@@ -129,9 +126,7 @@ export default function AboutSection() {
       // REVEAL ELEMENTS
       // ========================================
 
-      const revealElements = gsap.utils.toArray<HTMLElement>(
-        ".about-reveal"
-      );
+      const revealElements = gsap.utils.toArray<HTMLElement>(".about-reveal");
 
       if (revealElements.length) {
         gsap.fromTo(
@@ -151,15 +146,13 @@ export default function AboutSection() {
               start: "top 70%",
               toggleActions: "play none none reverse",
             },
-          }
+          },
         );
       }
 
       // ========================================
       // CARDS
       // ========================================
-
-    
 
       // ========================================
       // GOLD LINE
@@ -180,7 +173,7 @@ export default function AboutSection() {
               start: "top 85%",
               toggleActions: "play none none reverse",
             },
-          }
+          },
         );
       }
 
@@ -213,18 +206,13 @@ export default function AboutSection() {
       className="relative overflow-hidden bg-sub-background px-5 py-15 text-white sm:px-8 md:py-20 lg:px-20 lg:py-25"
     >
       <div className="mx-auto max-w-[1500px]">
-
         {/* =====================================
             TOP BAR
         ====================================== */}
 
         <div className="about-reveal mb-10 flex items-center justify-between md:mb-15">
-
           <div className="flex items-center gap-3">
-            <span
-              ref={starRef}
-              className="text-xl text-primary"
-            >
+            <span ref={starRef} className="text-xl text-primary">
               ✱
             </span>
 
@@ -240,7 +228,6 @@ export default function AboutSection() {
               EST. 2014
             </span>
           </div>
-
         </div>
 
         {/* =====================================
@@ -248,82 +235,63 @@ export default function AboutSection() {
         ====================================== */}
 
         <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
-
           {/* ===================================
               LEFT CONTENT
           ==================================== */}
 
           <div className="lg:col-span-7">
-
             {/* Small Label */}
 
             <div className="about-reveal mb-8 flex items-center gap-3">
-
               <span className="h-[1px] w-10 bg-primary" />
 
               <span className="text-xs uppercase tracking-[0.25em] text-muted/80">
                 Who We Are
               </span>
-
             </div>
 
             {/* Heading */}
 
             <div className="overflow-hidden">
-
               <h2
                 ref={headingRef}
-                className="text-[clamp(5rem,10vw,9.5rem)] text-muted font-bold leading-[0.82]  font-heading"
+                className="text-[clamp(3rem,10vw,9.5rem)] text-muted font-bold leading-[0.82]  font-heading"
               >
+                <span className="mr-3">WE TAKE</span>
 
-                <span className="mr-3">
-                  WE TAKE
-                </span>
+                <span className="mr-3">CARE OF</span>
 
-                <span className="mr-3">
-                  CARE OF
-                </span>
-
-                <span className="text-primary">
-                  THE DETAILS.
-                </span>
-
+                <span className="text-primary">THE DETAILS.</span>
               </h2>
-
             </div>
 
             {/* Description */}
 
             <div className="about-content mt-12 max-w-[650px] md:mt-16">
+              <p className="about-reveal text-sm leading-relaxed text-muted/50 sm:text-xl">
+                KG Car Care is a trusted automotive service destination in
+                Coimbatore, built around one simple idea — your car deserves
+                professional care at every stage.
+              </p>
 
-             
-    <p className="about-reveal text-lg leading-relaxed text-muted/50 sm:text-xl">
-      KG Car Care is a trusted automotive service destination in
-      Coimbatore, built around one simple idea — your car deserves
-      professional care at every stage.
-    </p>
+              <p className="about-reveal mt-6 text-sm leading-7 text-muted sm:text-base">
+                From regular maintenance and mechanical repairs to washing,
+                detailing, denting, painting and AC care, our team handles your
+                vehicle with the attention it deserves.
+              </p>
 
-    <p className="about-reveal mt-6 text-sm leading-7 text-muted sm:text-base">
-      From regular maintenance and mechanical repairs to washing,
-      detailing, denting, painting and AC care, our team handles your
-      vehicle with the attention it deserves.
-    </p>
-
-    <p className="about-reveal mt-6 text-sm leading-7 text-muted sm:text-base">
-      We combine skilled workmanship, proper equipment and a commitment
-      to quality to keep your car performing smoothly, looking its best
-      and ready for the road.
-    </p>
+              <p className="about-reveal mt-6 text-sm leading-7 text-muted sm:text-base">
+                We combine skilled workmanship, proper equipment and a
+                commitment to quality to keep your car performing smoothly,
+                looking its best and ready for the road.
+              </p>
 
               {/* CTA */}
 
               <div className="about-reveal mt-10">
-                <ArrowButton title="Explore Our Services" href="/service"/>
-
+                <ArrowButton title="Explore Our Services" href="/service" />
               </div>
-
             </div>
-
           </div>
 
           {/* ===================================
@@ -331,10 +299,9 @@ export default function AboutSection() {
           ==================================== */}
 
           <div className="lg:col-span-5">
-
-  <div
-    ref={imageWrapperRef}
-    className="
+            <div
+              ref={imageWrapperRef}
+              className="
       group
       relative
       mx-auto
@@ -343,14 +310,13 @@ export default function AboutSection() {
       max-w-[520px]
       overflow-visible
     "
-  >
-
-    {/* ─────────────────────────
+            >
+              {/* ─────────────────────────
         OUTER GOLD FRAME
     ───────────────────────── */}
 
-    <div
-      className="
+              <div
+                className="
         absolute
         -right-5
         -top-5
@@ -363,12 +329,12 @@ export default function AboutSection() {
         group-hover:-right-7
         group-hover:-top-7
       "
-    />
+              />
 
-    {/* Secondary Gold Line */}
+              {/* Secondary Gold Line */}
 
-    <div
-      className="
+              <div
+                className="
         absolute
         -bottom-3
         -left-3
@@ -378,15 +344,15 @@ export default function AboutSection() {
         border
         border-primary/15
       "
-    />
+              />
 
-    {/* ─────────────────────────
+              {/* ─────────────────────────
         IMAGE
     ───────────────────────── */}
 
-    <div
-      ref={imageRef}
-      className="
+              <div
+                ref={imageRef}
+                className="
         relative
         z-10
         h-full
@@ -395,27 +361,26 @@ export default function AboutSection() {
         bg-neutral-950
         shadow-[0_30px_80px_rgba(0,0,0,0.45)]
       "
-    >
-
-      <Image
-        src="/home/about_img.webp"
-        alt="KG Car Care"
-        fill
-        loading="lazy"
-        className="
+              >
+                <Image
+                  src="/home/about_img.webp"
+                  alt="KG Car Care"
+                  fill
+                  loading="lazy"
+                  className="
           object-cover
           transition-transform
           duration-1000
           ease-out
           group-hover:scale-105
         "
-        sizes="(max-width: 1084px) 90vw, 40vw"
-      />
+                  sizes="(max-width: 1084px) 90vw, 40vw"
+                />
 
-      {/* Cinematic Overlay */}
+                {/* Cinematic Overlay */}
 
-      <div
-        className="
+                <div
+                  className="
           absolute
           inset-0
           bg-gradient-to-t
@@ -423,12 +388,12 @@ export default function AboutSection() {
           via-black/10
           to-black/20
         "
-      />
+                />
 
-      {/* Subtle Gold Light */}
+                {/* Subtle Gold Light */}
 
-      <div
-        className="
+                <div
+                  className="
           absolute
           inset-0
           opacity-0
@@ -437,12 +402,12 @@ export default function AboutSection() {
           group-hover:opacity-100
           bg-[radial-gradient(circle_at_70%_30%,rgba(245,184,62,0.15),transparent_45%)]
         "
-      />
+                />
 
-      {/* Bottom Location */}
+                {/* Bottom Location */}
 
-      <div
-        className="
+                <div
+                  className="
           absolute
           bottom-6
           right-5
@@ -451,19 +416,17 @@ export default function AboutSection() {
           tracking-[0.3em]
           text-white/50
         "
-      >
-        Coimbatore · Tamil Nadu
-      </div>
+                >
+                  Coimbatore · Tamil Nadu
+                </div>
+              </div>
 
-    </div>
-
-
-    {/* ─────────────────────────
+              {/* ─────────────────────────
         FLOATING BADGE
     ───────────────────────── */}
 
-   <div
-  className="
+              <div
+                className="
     absolute
     -bottom-4
     lg:-left-4
@@ -479,27 +442,22 @@ export default function AboutSection() {
     border-primary
     lg:bg-[#0a0a0a]
   "
->
-  <CircularText
-    text="KG CAR CARE ★ PREMIUM SERVICE ★ "
-    spinDuration={20}
-    onHover="speedUp"
-    size={55}
-    
-   
-  />
+              >
+                <CircularText
+                  text="KG CAR CARE ★ PREMIUM SERVICE ★ "
+                  spinDuration={20}
+                  onHover="speedUp"
+                  size={55}
+                />
 
-  <div className="absolute flex h-[32%] w-[32%] items-center justify-center rounded-full bg-primary">
-    <span className="text-[clamp(8px,2vw,12px)] font-bold text-black">
-      KG
-    </span>
-  </div>
-</div>
-
-  </div>
-
-</div>
-
+                <div className="absolute flex h-[32%] w-[32%] items-center justify-center rounded-full bg-primary">
+                  <span className="text-[clamp(8px,2vw,12px)] font-bold text-black">
+                    KG
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* =====================================
@@ -511,48 +469,26 @@ export default function AboutSection() {
           className="about-line mt-10 h-px origin-left bg-primary md:mt-15"
         />
 
-        
-
-      
-
         {/* =====================================
             BOTTOM STATEMENT
         ====================================== */}
 
-        <div className="about-reveal  flex flex-col justify-between gap-10  pt-10  md:flex-row md:items-end">
-
+        <div className="about-reveal  flex flex-col justify-between  gap-5  pt-10  lg:flex-row lg:items-end md:items-center">
           <div>
-
             <p className="mb-3 text-xs uppercase tracking-[0.25em] text-neutral-600">
               Our Philosophy
             </p>
 
-            <h3 className="max-w-[700px] font-heading  font-medium  text-muted/70 text-4xl md:text-6xl">
+            <h3 className="max-w-[700px] font-heading  font-medium  text-muted/70 text-3xl md:text-6xl">
               YOUR CAR DESERVES
-              <span className="text-primary ">
-                {" "}BETTER.
-              </span>
+              <span className="text-primary "> BETTER.</span>
             </h3>
-
           </div>
 
-          {/* <Link
-            href="#contact"
-            className="group flex w-fit shrink-0 items-center gap-4 rounded-full bg-white px-6 py-4 text-sm font-medium text-black transition-all duration-300 hover:bg-[#f5b83e]"
-          >
-            BOOK A SERVICE
-
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
-              <ArrowUpRight size={18} />
-            </span>
-
-          </Link> */}
-          <div className="mb-5">
-
-<Button title="BOOK A SERVICE" href="/services"/>
+          <div className="lg:mb-5">
+            <Button title="BOOK A SERVICE" href="/services" />
           </div>
         </div>
-
       </div>
     </section>
   );

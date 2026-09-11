@@ -50,7 +50,7 @@ export default function AboutWhyWeBuilt() {
   }, []);
   return (
     <section
-      className="story-section py-24 md:py-20 bg-sub-background"
+      className="story-section py-20 bg-sub-background"
       ref={sectionRef}
     >
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-8">
@@ -92,9 +92,9 @@ export default function AboutWhyWeBuilt() {
             </span>
           </div>
 
-          <h2 className="max-w-xl font-heading text-5xl font-bold text-muted lg:text-8xl">
+          <h2 className="max-w-xl font-heading text-5xl md:text-7xl font-bold text-muted lg:text-8xl">
             Why We Built
-            <span className="block text-primary">KG Car Service</span>
+            <span className="block text-primary ">KG Car Service</span>
           </h2>
 
           <p className="mt-7 max-w-xl leading-8 text-zinc-600">

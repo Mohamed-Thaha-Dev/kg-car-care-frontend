@@ -84,7 +84,7 @@ export default function ServicesGrid() {
             <h2 className="text-4xl font-heading font-bold text-white md:text-6xl lg:text-7xl">
               Professional Services.
 
-              <span className="block text-zinc-500">
+              <span className="block text-primary">
                 Exceptional Care.
               </span>
             </h2>
@@ -122,9 +122,9 @@ export default function ServicesGrid() {
               className="
                 group
                 relative
-                lg:h-[520px]
-                h-[450px]
-                w-[380px]
+                h-[520px]
+                lg:w-[380px]
+                w-[350px]
                 shrink-0
                 mt-12
                 overflow-hidden

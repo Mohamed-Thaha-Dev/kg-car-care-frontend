@@ -103,9 +103,9 @@ export default function GalleryHero() {
 
             {/* Scroll Down */}
 
-            <span className="group flex w-fit items-center gap-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-colors hover:text-red-400">
+            <span className="group flex w-fit items-center gap-4 text-xs font-semibold uppercase tracking-[0.25em] text-primary transition-colors hover:text-red-700">
               Explore Gallery
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-muted transition-all duration-300 group-hover:border-red-500 group-hover:bg-red-500">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-muted transition-all duration-300 group-hover:border-red-500 group-hover:bg-red-500 group-hover:text-white ">
                 <ArrowDown className="h-5 w-5" />
               </span>
             </span>

@@ -114,7 +114,7 @@ export default function VideoShowcase() {
             <span className="h-px w-8 bg-primary" />
           </div>
 
-          <h2 className="video-title font-heading text-5xl md:6xl font-bold uppercase lg:text-8xl">
+          <h2 className="video-title font-heading text-5xl md:7xl font-bold uppercase lg:text-8xl">
             OUR{" "}
             <span className="text-primary">
               WORK
@@ -132,7 +132,7 @@ export default function VideoShowcase() {
             VIDEOS
         ========================= */}
 
-        <div className="video-grid grid gap-10 md:grid-cols-3">
+        <div className="video-grid grid gap-10 lg:grid-cols-3 md:grid-cols-2">
 
           {/* VIDEO 01 */}
 

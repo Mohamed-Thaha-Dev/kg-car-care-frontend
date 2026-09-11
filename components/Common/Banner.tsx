@@ -50,7 +50,7 @@ export default function Banner() {
 
       {/* Content */}
       <div className="cta-content relative z-10 mx-auto max-w-5xl text-center">
-        <h2 className="text-5xl font-black uppercase font-heading leading-[0.95]  text-white sm:text-6xl lg:text-8xl">
+        <h2 className="text-4xl font-black uppercase font-heading leading-[0.95]  text-white sm:text-6xl lg:text-8xl">
           Ready To Give Your Car
     
           <span className="block text-primary">The Care It Deserves?</span>

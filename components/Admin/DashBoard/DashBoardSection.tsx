@@ -95,7 +95,7 @@ useEffect(() => {
       : 0;
 
   return (
-    <main className="min-h-screen bg-[#f6f6f4] p-5 md:p-8">
+    <main className="min-h-screen bg-[#f6f6f4] p-5 md:p-8 pt-30 pb-10">
 
       <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
@@ -111,17 +111,6 @@ useEffect(() => {
             Monitor your enquiries and gallery activity.
           </p>
         </div>
-
-        <button
-          onClick={() => getDashboardStats(true)}
-          disabled={refreshing}
-          className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 shadow-sm transition hover:bg-gray-50 disabled:opacity-60"
-        >
-          <RefreshCw
-            className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`}
-          />
-          Refresh
-        </button>
       </div>
 
       {/* ================= BENTO GRID ================= */}

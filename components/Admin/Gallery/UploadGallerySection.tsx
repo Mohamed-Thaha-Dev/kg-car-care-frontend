@@ -123,7 +123,7 @@ export default function AdminGallerySection() {
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-gray-50 p-6 md:p-10">
+    <div ref={containerRef} className="min-h-screen bg-gray-50 p-6 md:p-10 pt-30">
       <div className="mx-auto max-w-3xl">
         {/* Header */}
 

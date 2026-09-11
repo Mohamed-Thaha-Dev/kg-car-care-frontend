@@ -13,6 +13,7 @@ const menuItems = [
   { title: "Services", href: "/services", shape: 3 },
   { title: "Gallery", href: "/gallery", shape: 4 },
   { title: "Contact Us", href: "/contact", shape: 5 },
+  { title: "Login", href: "/admin/login", shape: 5 },
 ];
 
 export default function Navbar() {
@@ -377,7 +378,7 @@ useEffect(() => {
                 <span className="absolute h-5 w-[1px] bg-current" />
               </div>
             </button>
-            <div className="bg-black p-1 rounded-full">
+            <div className="bg-black p-2 hidden md:block rounded-full">
               <Link href="/admin/login">
             <User/>
             </Link>
@@ -405,7 +406,7 @@ useEffect(() => {
 
         <div
           ref={panelRef}
-          className="absolute right-0 top-0 h-full w-full overflow-hidden bg-[#111111] text-white md:w-[80%] lg:w-[45%]"
+          className="absolute right-0 top-0 h-full w-full overflow-hidden bg-[#111111] text-white lg:w-[45%]"
         >
           {/* BACKGROUND SHAPES */}
 
@@ -448,9 +449,9 @@ useEffect(() => {
 
           {/* MENU CONTENT */}
 
-          <div className="relative flex h-full flex-col justify-between px-8 pb-10 pt-32 md:px-14 lg:px-20">
+          <div className="relative flex h-full flex-col gap-8 lg:gap-0 px-8 pb-10 pt-32 md:px-14 lg:px-20">
             {/* TOP */}
-
+        
             <div className="flex items-center justify-between">
               <span className="text-xs uppercase tracking-[0.3em] text-white/40">
                 Navigation
@@ -487,31 +488,6 @@ useEffect(() => {
                 ))}
               </ul>
             </nav>
-
-            {/* BOTTOM */}
-
-            {/* <div className="flex flex-col justify-between gap-6 border-t border-white/10 pt-6 md:flex-row md:items-end">
-              <div>
-                <p className="mb-2 text-xs uppercase tracking-[0.25em] text-white/40">
-                  Premium Auto Care
-                </p>
-
-                <p className="max-w-sm text-sm leading-6 text-white/60">
-                  Professional car care, detailing, repair and restoration
-                  services built around your vehicle.
-                </p>
-              </div>
-
-              <div className="flex gap-6 text-xs uppercase tracking-[0.2em] text-white/40">
-                <a href="#" className="transition-colors hover:text-[#C9A227]">
-                  Instagram
-                </a>
-
-                <a href="#" className="transition-colors hover:text-[#C9A227]">
-                  WhatsApp
-                </a>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

@@ -16,13 +16,13 @@ type ButtonProps = {
 const variants: Record<Variant, string> = {
   primary: "bg-primary text-primary-foreground  transition hover:bg-red-700",
   outline:
-    "border border-border text-foreground hover:border-primary  transition hover:text-primary",
+    "border border-border text-foreground hover:border-primary transition hover:text-primary",
   ghost: "text-muted-foreground  transition hover:text-primary",
 };
 
 const sizes: Record<Size, string> = {
   sm: "h-9 px-4 text-xs",
-  md: "h-11 px-6 text-sm",
+  md: "h-11 px-6 lg:text-sm text-[12px]",
   lg: "h-14 px-10 text-base",
 };
 

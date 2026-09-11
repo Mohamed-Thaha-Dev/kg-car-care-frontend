@@ -155,7 +155,7 @@ export default function GallerySection() {
   );
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-[#f7f7f7] p-5 md:p-8">
+    <div ref={containerRef} className="min-h-screen bg-[#f7f7f7] p-5 md:p-8 pt-30">
       <div className="mx-auto max-w-7xl">
         {/* Header */}
 

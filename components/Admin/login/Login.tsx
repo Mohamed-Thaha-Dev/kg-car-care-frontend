@@ -111,7 +111,7 @@ finally{
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/home/homesImg.webp"
+          src="/home/service-hero.webp"
           alt="KG Car Care"
           fill
           priority

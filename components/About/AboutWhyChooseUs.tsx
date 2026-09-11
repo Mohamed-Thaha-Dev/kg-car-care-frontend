@@ -43,9 +43,9 @@ export default function AboutWhyChooseUUs(){
               </span>
             </div>
 
-            <h2 className="text-4xl font-bold font-heading  sm:text-8xl">
+            <h2 className="text-5xl font-bold font-heading md:text-7xl lg:text-8xl">
               Built Around
-              <span className="ml-2 text-foreground/50">Better Car Care.</span>
+              <span className="lg:ml-2 block lg:inline text-primary">Better Car Care.</span>
             </h2>
           </div>
 
