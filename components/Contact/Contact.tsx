@@ -1,71 +1,63 @@
 "use client";
 
-import { useLayoutEffect, useRef} from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  Phone,
-  MapPin,
-  Clock3,
-} from "lucide-react";
+import { Phone, MapPin, Clock3 } from "lucide-react";
 import ContactForm from "../Common/ContactForm";
-import GoogleMap from "../Common/Map";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      // LEFT CONTENT
+      gsap.from(".enquiry-info", {
+        y: 70,
+        opacity: 0,
+        duration: 1.1,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          once: true,
+        },
+      });
 
-useLayoutEffect(() => {
-  const ctx = gsap.context(() => {
-    // LEFT CONTENT
-    gsap.from(".enquiry-info", {
-      y: 70,
-      opacity: 0,
-      duration: 1.1,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 75%",
-        once: true,
-      },
-    });
+      // RIGHT FORM
+      gsap.from(".enquiry-panel", {
+        y: 70,
+        opacity: 0,
+        duration: 1.1,
+        delay: 0.15,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%",
+          once: true,
+        },
+      });
 
-    // RIGHT FORM
-    gsap.from(".enquiry-panel", {
-      y: 70,
-      opacity: 0,
-      duration: 1.1,
-      delay: 0.15,
-      ease: "power4.out",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 75%",
-        once: true,
-      },
-    });
+      // CONTACT DETAILS
+      gsap.from(".contact-meta", {
+        y: 25,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.12,
+        delay: 0.25,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 70%",
+          once: true,
+        },
+      });
+    }, sectionRef);
 
-    // CONTACT DETAILS
-    gsap.from(".contact-meta", {
-      y: 25,
-      opacity: 0,
-      duration: 0.7,
-      stagger: 0.12,
-      delay: 0.25,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 70%",
-        once: true,
-      },
-    });
-  }, sectionRef);
-
-  return () => ctx.revert();
-}, []);
-
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section
@@ -158,19 +150,11 @@ useLayoutEffect(() => {
                 lg:text-8xl
               "
             >
-              Let's take  
-
+              Let's take
               <br />
-
-              <span className="text-foreground/40">
-                care of 
-              </span>
-
+              <span className="text-foreground/40">care of</span>
               <br />
-
-              <span className="text-primary">
-              your car.
-              </span>
+              <span className="text-primary">your car.</span>
             </h2>
 
             <p
@@ -183,9 +167,9 @@ useLayoutEffect(() => {
                 sm:text-base
               "
             >
-              Whether it needs a deep detail, premium protection,
-              paint correction or a complete transformation —
-              tell us what you have in mind.
+              Whether it needs a deep detail, premium protection, paint
+              correction or a complete transformation — tell us what you have in
+              mind.
             </p>
 
             {/* CONTACT META */}
@@ -238,9 +222,7 @@ useLayoutEffect(() => {
                     Call
                   </p>
 
-                  <p className="mt-1 text-sm text-white">
-                    +91 9751003567
-                  </p>
+                  <p className="mt-1 text-sm text-white">+91 9751003567</p>
                 </div>
               </a>
               <a
@@ -288,9 +270,7 @@ useLayoutEffect(() => {
                     Call
                   </p>
 
-                  <p className="mt-1 text-sm text-white">
-                    +91 9751003050
-                  </p>
+                  <p className="mt-1 text-sm text-white">+91 9751003050</p>
                 </div>
               </a>
 
@@ -341,7 +321,7 @@ useLayoutEffect(() => {
                   </p>
                 </div>
               </div>
-               <div
+              <div
                 className="
                   contact-meta
                   flex
@@ -440,26 +420,10 @@ useLayoutEffect(() => {
           {/* =====================================
               RIGHT FORM
           ===================================== */}
-    <div className="enquiry-panel">
-
-            <ContactForm/>
-
-            
-    </div>
-
+          <div className="enquiry-panel">
+            <ContactForm />
+          </div>
         </div>
-        {/* <div className="grid gap-10 md:grid-cols-2 grid-col-1">
-          <div className="flex flex-col">
-            <GoogleMap/>
-            <p className="text-left">Branch 1</p>
-            
-
-          </div>
-          <div  className="flex flex-col text-left">
-          <GoogleMap/>
- <p className="text-left">Branch 2</p>
-          </div>
-        </div> */}
       </div>
     </section>
   );
