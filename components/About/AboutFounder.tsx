@@ -189,7 +189,7 @@ export default function AboutFounder() {
             <Image
               src="/home/founder.webp"
               alt="KG Car Service Founder"
-              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-top"
             />
 

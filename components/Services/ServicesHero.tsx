@@ -7,9 +7,9 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { Button } from "../ui/Button";
 
-export default function   ServicesHero() {
+export default function ServicesHero() {
   const heroRef = useRef<HTMLElement>(null);
-  const imgRef = useRef<HTMLDivElement>(null)
+  const imgRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -26,7 +26,7 @@ export default function   ServicesHero() {
           y: 0,
           duration: 0.6,
           ease: "power3.out",
-        }
+        },
       )
         .fromTo(
           ".services-hero-title",
@@ -41,7 +41,7 @@ export default function   ServicesHero() {
             stagger: 0.15,
             ease: "power4.out",
           },
-          "-=0.2"
+          "-=0.2",
         )
         .fromTo(
           ".services-hero-text",
@@ -55,7 +55,7 @@ export default function   ServicesHero() {
             duration: 0.7,
             ease: "power3.out",
           },
-          "-=0.5"
+          "-=0.5",
         )
         .fromTo(
           ".services-hero-btn",
@@ -69,25 +69,24 @@ export default function   ServicesHero() {
             duration: 0.6,
             ease: "power3.out",
           },
-          "-=0.3"
+          "-=0.3",
         );
 
-        if(imgRef.current){
-          gsap.to(imgRef.current,{
-            yPercent:15,
-            ease:"none",
+      if (imgRef.current) {
+        gsap.to(imgRef.current, {
+          yPercent: 15,
+          ease: "none",
 
-            scrollTrigger:{
-              trigger:heroRef.current,
-              start:"top top",
-              end:"bottom top",
-              scrub:true,
-              invalidateOnRefresh: true,
-            }
-            
-          })
-        }
-           gsap.to(".hero-content", {
+          scrollTrigger: {
+            trigger: heroRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        });
+      }
+      gsap.to(".hero-content", {
         y: -80,
         opacity: 0.7,
         ease: "none",
@@ -111,16 +110,19 @@ export default function   ServicesHero() {
     >
       {/* Background */}
       <div className="absolute inset-0">
-        <div ref={imgRef} className=" absolute -inset-[10] h-[120%] w-[120%]">
-<Image
-          src="/home/service-hero.webp"
-          alt="KG Car Care Services"
-          fill
-          priority
-          className="object-cover opacity-70"
-        />
-        </div>
+        <div ref={imgRef}   
+          className="absolute inset-0 h-full w-full md:-inset-[10%] md:h-[120%] md:w-[120%]"
         
+        >
+          <Image
+            src="/home/service-hero.webp"
+            alt="KG Car Care Services"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover opacity-70"
+          />
+        </div>
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/60  to-transparent " />
 
@@ -139,9 +141,7 @@ export default function   ServicesHero() {
           </div>
 
           <h1 className="mb-8 text-5xl font-bold font-heading leading-[0.95]  text-white sm:text-6xl md:text-7xl lg:text-8xl">
-            <span className="services-hero-title block">
-              Complete Care
-            </span>
+            <span className="services-hero-title block">Complete Care</span>
 
             <span className="services-hero-title block text-primary">
               For Every Drive.
@@ -149,15 +149,13 @@ export default function   ServicesHero() {
           </h1>
 
           <p className="services-hero-text max-w-xl text-base leading-7 text-zinc-300 md:text-lg">
-            From routine maintenance to advanced repairs, KG Car Care
-            provides professional automotive solutions designed to keep
-            your vehicle performing at its best.
+            From routine maintenance to advanced repairs, KG Car Care provides
+            professional automotive solutions designed to keep your vehicle
+            performing at its best.
           </p>
 
           <div className="services-hero-btn mt-10 flex flex-wrap gap-4">
-            <Button title="BOOK A SERVICE" href="/contact"  arrow={true} />
-            
-            
+            <Button title="BOOK A SERVICE" href="/contact" arrow={true} />
           </div>
         </div>
       </div>

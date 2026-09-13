@@ -132,14 +132,15 @@ export default function AboutHero() {
       <div className="absolute inset-0 overflow-hidden">
         <div
           ref={imageRef}
-          className="absolute -inset-[10%] h-[120%] w-[120%]"
+          className="absolute inset-0 h-full w-full md:-inset-[10%] md:h-[120%] md:w-[120%]"
         >
           <Image
             src="/home/about-hero.webp"
             alt="KG Car Service Workshop"
             fill
+            sizes="100vw"
             priority
-            className="object-cover object-[80%]"
+            className="object-cover object-[70%] md:object-[80%]"
           />
         </div>
 
