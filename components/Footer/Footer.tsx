@@ -28,8 +28,9 @@ export default function Footer() {
           <div className="footer-reveal lg:col-span-1">
             <Link href="/" className="group inline-block">
               <Image
-                src="/logo/logo.png"
+                src="/logo/logo.webp"
                 alt="KG Car Service Logo"
+                loading="lazy"
                 width={130}
                 height={55}
                 className="h-auto w-[170px] object-contain "
@@ -192,6 +193,7 @@ export default function Footer() {
                 ["Services", "/services"],
                 ["Gallery", "/gallery"],
                 ["Contact", "/contact"],
+                ["Login","/admin/login"]
               ].map(([label, href]) => (
                 <Link
                   key={label}

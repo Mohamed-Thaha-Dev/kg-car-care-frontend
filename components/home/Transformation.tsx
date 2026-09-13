@@ -55,7 +55,7 @@ export default function TransformationSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-sub-background px-6  text-white sm:px-8 lg:px-20 py-20"
+      className="relative overflow-hidden bg-sub-background px-5  text-white sm:px-8 lg:px-20 py-20"
     >
       {/* BACKGROUND DETAIL */}
 
@@ -82,9 +82,9 @@ export default function TransformationSection() {
 
             {/* HEADING */}
 
-            <h2 className="max-w-[500px] text-4xl text-muted font-black uppercase  font-heading  sm:text-6xl md:text-7xl lg:text-8xl">
+            <h2 className="max-w-[500px] text-[45px] text-muted font-black uppercase  font-heading  sm:text-6xl md:text-7xl lg:text-8xl">
               EVERY
-              <span className="text-primary mx-2 ">DETAIL</span>
+              <span className=" text-primary mx-2 ">DETAIL</span>
               MATTERS.
             </h2>
 

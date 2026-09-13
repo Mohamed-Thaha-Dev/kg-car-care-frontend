@@ -8,104 +8,104 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default function AboutFounder() {
   const sectionRef = useRef<HTMLElement>(null);
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          once: true,
-        },
-      });
+ useLayoutEffect(() => {
+  const ctx = gsap.context(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 85%",
+        once: true,
+      },
+    });
 
-      tl.fromTo(
-        ".founder-eyebrow",
+    tl.fromTo(
+      ".founder-eyebrow",
+      {
+        y: 20,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.35,
+        ease: "power2.out",
+      },
+    )
+      .fromTo(
+        ".founder-title",
         {
-          y: 30,
+          y: 35,
           opacity: 0,
         },
         {
           y: 0,
           opacity: 1,
-          duration: 0.6,
+          duration: 0.5,
           ease: "power3.out",
         },
+        "-=0.15",
       )
-        .fromTo(
-          ".founder-title",
-          {
-            y: 60,
-            opacity: 0,
-          },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-            ease: "power4.out",
-          },
-          "-=0.3",
-        )
-        .fromTo(
-          ".founder-details",
-          {
-            y: 30,
-            opacity: 0,
-          },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.7,
-            ease: "power3.out",
-          },
-          "-=0.4",
-        )
-        .fromTo(
-          ".branch-card",
-          {
-            y: 40,
-            opacity: 0,
-          },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: "power3.out",
-          },
-          "-=0.3",
-        )
-        .fromTo(
-          ".founder-image",
-          {
-            scale: 1.08,
-            opacity: 0,
-          },
-          {
-            scale: 1,
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out",
-          },
-          "-=0.8",
-        )
-        .fromTo(
-          ".founder-card",
-          {
-            y: 50,
-            opacity: 0,
-          },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.7,
-            ease: "power3.out",
-          },
-          "-=0.5",
-        );
-    }, sectionRef);
+      .fromTo(
+        ".founder-details",
+        {
+          y: 20,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.45,
+          ease: "power2.out",
+        },
+        "-=0.2",
+      )
+      .fromTo(
+        ".branch-card",
+        {
+          y: 20,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.4,
+          stagger: 0.08,
+          ease: "power2.out",
+        },
+        "-=0.2",
+      )
+      .fromTo(
+        ".founder-image",
+        {
+          scale: 1.04,
+          opacity: 0,
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.7,
+          ease: "power2.out",
+        },
+        "-=0.5",
+      )
+      .fromTo(
+        ".founder-card",
+        {
+          y: 25,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.45,
+          ease: "power2.out",
+        },
+        "-=0.35",
+      );
+  }, sectionRef);
 
-    return () => ctx.revert();
-  }, []);
+  return () => ctx.revert();
+}, []);
   return (
     <section className="py-20 bg-sub-background" ref={sectionRef}>
       <div className="lg:ml-20 ml-5 ">

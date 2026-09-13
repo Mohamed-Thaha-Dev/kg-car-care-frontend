@@ -5,11 +5,20 @@ import { Button } from "../ui/Button";
 import { ArrowDown } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutHero() {
   const heroRef = useRef<HTMLElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
+      /* =========================
+         HERO CONTENT ANIMATION
+      ========================= */
+
       const heroTl = gsap.timeline();
 
       heroTl
@@ -69,6 +78,43 @@ export default function AboutHero() {
           },
           "-=0.5",
         );
+
+      /* =========================
+         BACKGROUND PARALLAX
+      ========================= */
+
+      if (imageRef.current) {
+        gsap.to(imageRef.current, {
+          yPercent: 15,
+          ease: "none",
+
+          scrollTrigger: {
+            trigger: heroRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            invalidateOnRefresh: true,
+
+          },
+        });
+      }
+
+      /* =========================
+         OPTIONAL CONTENT PARALLAX
+      ========================= */
+
+      gsap.to(".hero-content", {
+        y: -80,
+        opacity: 0.7,
+        ease: "none",
+
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
     }, heroRef);
 
     return () => ctx.revert();
@@ -76,30 +122,42 @@ export default function AboutHero() {
 
   return (
     <section
-      className="relative flex min-h-screen items-center overflow-hidden bg-background"
       ref={heroRef}
+      className="relative flex min-h-screen items-center overflow-hidden bg-background"
     >
-      {/* Background Image */}
+      {/* =========================
+          BACKGROUND IMAGE
+      ========================= */}
 
-      <div className="absolute inset-0">
-        <Image
-          src="/home/about-hero.webp"
-          alt="KG Car Service Workshop"
-          fill
-          priority
-          className="object-cover opacity-70"
-        />
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          ref={imageRef}
+          className="absolute -inset-[10%] h-[120%] w-[120%]"
+        >
+          <Image
+            src="/home/about-hero.webp"
+            alt="KG Car Service Workshop"
+            fill
+            priority
+            className="object-cover object-[80%]"
+          />
+        </div>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black  to-transparent" />
+        {/* Left Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
 
+        {/* Bottom Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10" />
+
+        {/* Overall subtle dark layer */}
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
-      {/* Decorative Gradient */}
+      {/* =========================
+          HERO CONTENT
+      ========================= */}
 
-      {/* <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-red-600/20 blur-[150px]" /> */}
-
-      <div className="relative mx-auto w-full max-w-7xl px-6 pt-24 lg:px-8">
+      <div className="hero-content relative mx-auto w-full max-w-7xl px-6 pt-24 lg:px-8">
         <div className="max-w-4xl">
           {/* Eyebrow */}
 
@@ -113,14 +171,18 @@ export default function AboutHero() {
 
           {/* Title */}
 
-          <h1 className="mb-8 text-5xl font-heading font-bold leading-[0.95]  text-white sm:text-6xl md:text-7xl lg:text-8xl">
-            <span className="hero-title-line block">Driven by Passion.</span>
+          <h1 className="mb-8 font-heading text-5xl font-bold leading-[0.95] text-white sm:text-6xl md:text-7xl lg:text-8xl">
+            <span className="hero-title-line block">
+              Driven by Passion.
+            </span>
 
-            <span className="hero-title-line text-zinc-400 mr-2">
+            <span className="hero-title-line mr-2 text-zinc-400">
               Powered by
             </span>
 
-            <span className="hero-title-line text-primary">Precision.</span>
+            <span className="hero-title-line text-primary">
+              Precision.
+            </span>
           </h1>
 
           {/* Description */}
@@ -133,8 +195,12 @@ export default function AboutHero() {
 
           {/* Buttons */}
 
-          <div className="hero-buttons mt-10 flex   gap-4">
-            <Button title="Book a Service" href="/contact" variant="primary" />
+          <div className="hero-buttons mt-10 flex gap-4">
+            <Button
+              title="Book a Service"
+              href="/contact"
+              variant="primary"
+            />
 
             <Button
               title="Explore Services"
@@ -145,7 +211,9 @@ export default function AboutHero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* =========================
+          SCROLL INDICATOR
+      ========================= */}
 
       <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 md:flex">
         <span className="text-[10px] font-semibold tracking-[0.3em] text-zinc-400">

@@ -121,7 +121,7 @@ export default function KGCarTestimonials() {
               className="
                 testimonial-title
                 max-w-3xl
-                text-4xl
+                text-[44px]
                 uppercase
                 font-heading
                 font-semibold
@@ -236,8 +236,8 @@ export default function KGCarTestimonials() {
               href="https://www.google.co.in/search?sca_esv=00b1959cab87582d&cs=1&output=search&q=KG+CAR+CARE&ludocid=13607929341182218812&lsig=AB86z5V3rYSXwkOyzmKj8S7Pj4ii&kgs=1168cda303c6c839&shndl=-1&shem=lcsnc,lsp&source=sh/x/loc/act/m1/2"
               target="_blank"
               className="
-      
-      text-xs
+      text-[10px]
+      sm:text-xs
       font-medium
       uppercase
       tracking-[0.12em]

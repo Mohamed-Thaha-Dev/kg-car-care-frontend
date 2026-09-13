@@ -9,6 +9,7 @@ import { Button } from "../ui/Button";
 
 export default function   ServicesHero() {
   const heroRef = useRef<HTMLElement>(null);
+  const imgRef = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -70,6 +71,34 @@ export default function   ServicesHero() {
           },
           "-=0.3"
         );
+
+        if(imgRef.current){
+          gsap.to(imgRef.current,{
+            yPercent:15,
+            ease:"none",
+
+            scrollTrigger:{
+              trigger:heroRef.current,
+              start:"top top",
+              end:"bottom top",
+              scrub:true,
+              invalidateOnRefresh: true,
+            }
+            
+          })
+        }
+           gsap.to(".hero-content", {
+        y: -80,
+        opacity: 0.7,
+        ease: "none",
+
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
     }, heroRef);
 
     return () => ctx.revert();
@@ -82,13 +111,16 @@ export default function   ServicesHero() {
     >
       {/* Background */}
       <div className="absolute inset-0">
-        <Image
+        <div ref={imgRef} className=" absolute -inset-[10] h-[120%] w-[120%]">
+<Image
           src="/home/service-hero.webp"
           alt="KG Car Care Services"
           fill
           priority
           className="object-cover opacity-70"
         />
+        </div>
+        
 
         <div className="absolute inset-0 bg-gradient-to-r from-black/60  to-transparent " />
 
@@ -96,7 +128,7 @@ export default function   ServicesHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-30 lg:px-8 lg:pb-24">
+      <div className="hero-content relative z-10 mx-auto w-full max-w-7xl px-6 pb-30 lg:px-8 lg:pb-24">
         <div className="max-w-4xl">
           <div className="services-hero-label mb-6 flex items-center gap-3">
             <span className="h-px w-12 bg-red-600" />

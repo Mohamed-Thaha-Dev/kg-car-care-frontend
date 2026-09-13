@@ -13,7 +13,7 @@ const menuItems = [
   { title: "Services", href: "/services", shape: 3 },
   { title: "Gallery", href: "/gallery", shape: 4 },
   { title: "Contact Us", href: "/contact", shape: 5 },
-  { title: "Login", href: "/admin/login", shape: 5 },
+  // { title: "Login", href: "/admin/login", shape: 5 },
 ];
 
 export default function Navbar() {
@@ -378,12 +378,7 @@ useEffect(() => {
                 <span className="absolute h-5 w-[1px] bg-current" />
               </div>
             </button>
-            <div className="bg-black p-2 hidden md:block rounded-full">
-              <Link href="/admin/login">
-            <User/>
-            </Link>
-
-            </div>
+      
             
           </div>
         </div>
@@ -406,7 +401,7 @@ useEffect(() => {
 
         <div
           ref={panelRef}
-          className="absolute right-0 top-0 h-full w-full overflow-hidden bg-[#111111] text-white lg:w-[45%]"
+          className="absolute right-0 top-0 h-full w-full overflow-hidden bg-[#111111] text-white lg:w-[35%]"
         >
           {/* BACKGROUND SHAPES */}
 
@@ -476,7 +471,7 @@ useEffect(() => {
                       type="button"
                       ref={addMenuLinkRef}
                       onClick={() => handleNavigation(item.href)}
-                      className="group flex w-full cursor-pointer items-center justify-between border-b border-white/10 py-4 text-left text-4xl font-medium tracking-tight transition-colors duration-300 hover:text-primary md:py-5 font-heading md:text-6xl lg:text-7xl"
+                      className="group flex w-full cursor-pointer items-center justify-between border-b border-white/10 py-4 text-left text-4xl font-medium tracking-tight transition-colors duration-300 hover:text-primary md:py-5 font-heading md:text-6xl lg:text-5xl"
                     >
                       <span>{item.title}</span>
 

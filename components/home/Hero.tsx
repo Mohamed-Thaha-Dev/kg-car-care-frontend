@@ -181,7 +181,7 @@ export function Hero() {
         // ========================================
 
         gsap.to(image, {
-          yPercent: 12,
+          yPercent: 15,
 
           ease: "none",
 
@@ -198,6 +198,19 @@ export function Hero() {
           },
         });
       }
+         gsap.to(".hero-content", {
+        y: -80,
+        opacity: 0.7,
+        ease: "none",
+
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+      
     }, section);
 
     // ==========================================
@@ -240,7 +253,7 @@ export function Hero() {
           CONTENT
       ====================================== */}
 
-      <div className="w-full pt-32 pb-14 lg:ml-20 lg:pb-20">
+      <div className="hero-content w-full pt-32 pb-14 lg:ml-20 lg:pb-20">
         <p
           data-hero-label
           className="label-mono text-sm text-primary"

@@ -7,24 +7,26 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function LenisProvider({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function LenisProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
+        // Mobile / Tablet → Native browser scroll
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    if (isMobile) {
+      return;
+    }
     const lenis = new Lenis({
       duration: 1.2,
       smoothWheel: true,
       syncTouch: true,
       autoRaf: false,
     });
-lenis.on("scroll", (e) => {
-  console.log("lenis scrolling", e.scroll);
-  ScrollTrigger.update();
-});
-    // Lenis → ScrollTrigger
-    // lenis.on("scroll", ScrollTrigger.update);
+
+     // Lenis → ScrollTrigger
+    lenis.on("scroll", () => {
+      ScrollTrigger.update();
+    });
+
 
     // GSAP → Lenis
     const update = (time: number) => {

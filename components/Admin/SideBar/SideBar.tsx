@@ -54,7 +54,7 @@ toast.success(response.data?.message)
           KG Car Services
         </h1> */}
 
-        <Image src="/logo/logo.png" alt="KG Car Care Logo" width={100} height={100}/>
+        <Image src="/logo/logo.webp" alt="KG Car Care Logo" width={100} height={100}/>
 
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}

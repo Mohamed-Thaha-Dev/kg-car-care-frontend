@@ -363,10 +363,9 @@ export default function AboutSection() {
       "
               >
                 <Image
-                  src="/home/about_img.webp"
+                  src="/home/about-img.webp"
                   alt="KG Car Care"
                   fill
-                  loading="lazy"
                   className="
           object-cover
           transition-transform
