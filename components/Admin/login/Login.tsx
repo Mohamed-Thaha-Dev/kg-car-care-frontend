@@ -57,7 +57,17 @@ export default function Login() {
 
   const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(email, password);
+
+    if (!email || !password) {
+      setError("Email and Password required");
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address");
+      return;
+    }
 
     try {
       setLoading(true);
@@ -71,10 +81,7 @@ export default function Login() {
           withCredentials: true,
         },
       );
-      console.log("this is Response Message ", response.data);
       localStorage.setItem("token", response.data.accessToken);
-
-      // Save Admin Details
       localStorage.setItem("admin", JSON.stringify(response.data.admin));
 
       if (response.data.success) {

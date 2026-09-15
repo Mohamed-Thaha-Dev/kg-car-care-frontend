@@ -32,7 +32,7 @@ api.interceptors.response.use(
       originalRequest._retry = true;
 
       try {
-        // Refresh token cookie automatically அனுப்பப்படும்
+        // Refresh token cookie automatically sended
         const refreshResponse = await axios.post(
           `${process.env.NEXT_PUBLIC_API_URL}/api/auth/refresh-token`,
           {},
@@ -42,7 +42,7 @@ api.interceptors.response.use(
         );
 
         const newAccessToken = refreshResponse.data.accessToken;
-        console.log("This is new Token",newAccessToken)
+       
         // Save new access token
         localStorage.setItem("token", newAccessToken);
 

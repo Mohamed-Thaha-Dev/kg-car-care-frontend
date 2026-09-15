@@ -25,7 +25,7 @@ export default function ContactForm() {
     const name = String(formData.get("name") || "").trim();
     const phone = String(formData.get("phone") || "").trim();
     const email = String(formData.get("email") || "").trim();
- 
+
     const service = String(formData.get("service") || "").trim();
     const message = String(formData.get("message") || "").trim();
 
@@ -90,11 +90,9 @@ export default function ContactForm() {
 
       // 4️⃣ Success Message
       setTimeout(() => {
-        
         setStatus("success");
       }, 500);
     } catch (err: any) {
-      console.log(err.response);
       setStatus(err.response.message);
     } finally {
       setIsSubmitting(false);

@@ -37,13 +37,13 @@ export default function AdminGallerySection() {
     const allowedTypes = ["image/jpeg", "image/jpg", "image/png", "image/webp"];
 
     if (!allowedTypes.includes(file.type)) {
-      toast.error("Please upload JPG, JPEG, PNG or WEBP image")
+      toast.error("Please upload JPG, JPEG, PNG or WEBP image");
       return;
     }
 
     // Maximum 5MB
     if (file.size > 5 * 1024 * 1024) {
-      toast.error("Image size must be less than 5MB")
+      toast.error("Image size must be less than 5MB");
       return;
     }
 
@@ -75,23 +75,22 @@ export default function AdminGallerySection() {
     event.preventDefault();
 
     if (!title.trim()) {
-      toast.error("Please enter a title")
+      toast.error("Please enter a title");
       return;
     }
 
     if (!selectedImage) {
-      toast.error("Please select an image")
+      toast.error("Please select an image");
       return;
     }
-   
 
     try {
-      setLoading(true)
+      setLoading(true);
       // Get JWT Token
       const token = localStorage.getItem("token");
 
       if (!token) {
-        toast.error("You are not authorized. Please login again.")
+        toast.error("You are not authorized. Please login again.");
         setLoading(false);
         return;
       }
@@ -104,26 +103,33 @@ export default function AdminGallerySection() {
         `${process.env.NEXT_PUBLIC_API_URL}/api/gallery`,
         formData,
         {
-          withCredentials:true,
+          withCredentials: true,
           headers: {
             Authorization: `Bearer ${token}`,
           },
         },
       );
-      console.log("this is response", response.data);
-      toast.success(response.data?.message || "Gallery image uploaded successfully!")
+
+      toast.success(
+        response.data?.message || "Gallery image uploaded successfully!",
+      );
       setTitle("");
       removeImage();
     } catch (error: any) {
-      toast.error(error.response?.data?.message ||error.message||"Uploaded Failed" )
-      console.log(error.message);
+      toast.error(
+        error.response?.data?.message || error.message || "Uploaded Failed",
+      );
+     
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-gray-50 p-6 md:p-10 pt-30">
+    <div
+      ref={containerRef}
+      className="min-h-screen bg-gray-50 p-6 md:p-10 pt-30"
+    >
       <div className="mx-auto max-w-3xl">
         {/* Header */}
 

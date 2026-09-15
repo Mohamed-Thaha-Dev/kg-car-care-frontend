@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 export default function AdminRegisterPage() {
   const formRef = useRef<HTMLDivElement>(null);
@@ -97,7 +98,6 @@ export default function AdminRegisterPage() {
         confirmPassword: "",
       });
     } catch (error:any) {
-      console.log(error.response)
       setError(
         error instanceof Error
           ? error.message
@@ -233,12 +233,12 @@ export default function AdminRegisterPage() {
         {/* Login */}
         <p className="mt-6 text-center text-sm text-gray-500">
           Already have an account?{" "}
-          <a
+          <Link
             href="/admin/login"
             className="font-semibold text-red-600 hover:text-red-700"
           >
             Login
-          </a>
+          </Link>
         </p>
       </div>
     </main>

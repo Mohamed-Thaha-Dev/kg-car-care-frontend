@@ -7,7 +7,6 @@ import {
   Search,
   Plus,
   Image as ImageIcon,
-  Pencil,
   Trash2,
   Calendar,
   X,
@@ -25,51 +24,6 @@ interface GalleryItem {
   image: string;
   createdAt: string;
 }
-
-// const galleryData: GalleryItem[] = [
-//   {
-//     id: 1,
-//     title: "BMW Ceramic Coating",
-//     image:
-//       "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80",
-//     createdAt: "01 Sep 2026",
-//   },
-//   {
-//     id: 2,
-//     title: "Premium Car Detailing",
-//     image:
-//       "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=800&q=80",
-//     createdAt: "30 Aug 2026",
-//   },
-//   {
-//     id: 3,
-//     title: "Interior Cleaning",
-//     image:
-//       "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80",
-//     createdAt: "28 Aug 2026",
-//   },
-//   {
-//     id: 4,
-//     title: "Car Polish Service",
-//     image:
-//       "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
-//     createdAt: "25 Aug 2026",
-//   },
-//   {
-//     id: 5,
-//     title: "Exterior Detailing",
-//     image:
-//       "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=800&q=80",
-//     createdAt: "22 Aug 2026",
-//   },
-//   {
-//     id: 6,
-//     title: "Complete Car Wash",
-//     image:
-//       "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=800&q=80",
-//     createdAt: "20 Aug 2026",
-//   },
-// ];
 
 export default function GallerySection() {
   const router = useRouter();
@@ -108,7 +62,8 @@ export default function GallerySection() {
           `${process.env.NEXT_PUBLIC_API_URL}/api/gallery/allimages`,
         );
         setGalleryData(response.data.data);
-      } catch (err) {
+      } catch (err:any) {
+        toast.error(err.message)
         console.log(err);
       }
     };
@@ -116,7 +71,6 @@ export default function GallerySection() {
   }, []);
 
   const handleDelete = async (id: string) => {
-    console.log(id);
     try {
       setDeletingId(id)
       const token = localStorage.getItem("token");
@@ -132,7 +86,8 @@ export default function GallerySection() {
       toast.success(response.data.message)
       setGalleryData((prev) => prev.filter((item) => item._id !== id));
     } catch (err: any) {
-      console.log("this is Err", err.response.data);
+
+      toast.error( err.response.data);
     }
     finally{
       setDeletingId(null)

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import axios from "axios";
 import {
   Images,
   MessageSquare,
@@ -9,12 +8,12 @@ import {
   Eye,
   PhoneCall,
   Loader2,
-  RefreshCw,
   ArrowUpRight,
-  User,
+
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import api from "@/lib/API/Api";
+import toast from "react-hot-toast";
 
 interface DashboardStats {
   totalGalleryImages: number;
@@ -48,7 +47,7 @@ const getDashboardStats = async (isRefresh = false) => {
 
     setStats(response.data.data);
   } catch (error: any) {
-    console.error(
+    toast.error(
       error.response?.data?.message || error.message,
     );
   } finally {
@@ -65,21 +64,10 @@ useEffect(() => {
     router.replace("/admin/login");
     return;
   }
-
   getDashboardStats();
 }, []);
 
-useEffect(() => {
-  const token = localStorage.getItem("token");
-  const storedAdmin = localStorage.getItem("admin");
 
-  if (!token || !storedAdmin) {
-    router.replace("/admin/login");
-    return;
-  }
-
-  getDashboardStats();
-}, []);
 
   if (loading) {
     return (
