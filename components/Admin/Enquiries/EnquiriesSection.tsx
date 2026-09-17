@@ -147,7 +147,6 @@ export default function EnquiriesPage() {
       }
     } catch (error: any) {
       if (error.response) {
-        console.log(error.response.data);
         toast.error(error.response.data.message);
       } else if (error.request) {
         setError("Server is currently unavailable. Please try again later.");

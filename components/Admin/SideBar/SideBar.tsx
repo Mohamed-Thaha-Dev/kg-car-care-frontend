@@ -32,7 +32,7 @@ export default function Sidebar() {
       router.replace("/admin/login");
     } catch (err: any) {
       toast.error(err.response.message);
-      console.log(err);
+      
     }
   };
   // Navigation function

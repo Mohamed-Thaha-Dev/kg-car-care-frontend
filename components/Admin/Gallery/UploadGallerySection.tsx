@@ -47,7 +47,7 @@ export default function AdminGallerySection() {
     }
 
     setSelectedImage(file);
-    console.log(selectedImage);
+    
 
     const imagePreview = URL.createObjectURL(file);
     setPreview(imagePreview);

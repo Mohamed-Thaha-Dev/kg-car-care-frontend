@@ -64,7 +64,7 @@ export default function GallerySection() {
         setGalleryData(response.data.data);
       } catch (err:any) {
         toast.error(err.message)
-        console.log(err);
+      
       }
     };
     getAllGalleryImages();
