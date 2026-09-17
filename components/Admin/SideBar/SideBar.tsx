@@ -76,17 +76,17 @@ export default function Sidebar() {
         {/* Logo */}
 
         <div className="mb-12 flex flex-col items-center justify-center">
-          {/* <h1 className="text-2xl font-bold">
-            KG Car Services
-          </h1> */}
+        <div className="bg-sub-background rounded-3xl p-2 w-40">
+
+        
           <Image
             src="/logo/logo.webp"
             alt="KG Car Care Logo"
             width={200}
             height={100}
           />
-
-          <p className="my-1 text-sm text-gray-400">Admin Dashboard</p>
+</div>
+          <p className="my-3 text-sm text-gray-400">Admin Dashboard</p>
           <div className="w-full h-[1px] bg-primary" />
         </div>
 

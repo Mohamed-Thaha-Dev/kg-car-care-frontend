@@ -111,7 +111,7 @@ export default function EnquiriesPage() {
         ),
       );
     } catch (error: any) {
-      console.error(error.response?.data?.message || error.message);
+      toast.error(error.response?.data?.message || error.message || "Failed to Fecth");
     }
   };
 

@@ -471,11 +471,11 @@ useEffect(() => {
                       type="button"
                       ref={addMenuLinkRef}
                       onClick={() => handleNavigation(item.href)}
-                      className="group flex w-full cursor-pointer text-muted items-center justify-between border-b border-white/10 py-4 text-left text-4xl font-medium tracking-tight transition-colors duration-300 hover:text-primary lg:py-5 font-heading   lg:text-5xl"
+                      className="group flex w-full cursor-pointer text-muted items-center justify-between border-b border-primary/50 py-4 text-left text-4xl font-medium tracking-tight transition-colors duration-300 hover:text-primary lg:py-5 font-heading   lg:text-5xl"
                     >
                       <span>{item.title}</span>
 
-                      <span className="text-sm text-white/30 transition-all duration-300 group-hover:translate-x-2 group-hover:text-primary">
+                      <span className="text-sm text-muted/30 transition-all duration-300 group-hover:translate-x-2 group-hover:text-primary">
                         0{index + 1}
                       </span>
                     </button>

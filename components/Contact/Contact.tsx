@@ -174,7 +174,7 @@ export function ContactSection() {
 
             {/* CONTACT META */}
 
-            <div className="mt-12 space-y-0 grid grid-cols-2 gap-5">
+            <div className="mt-12 space-y-0 grid md:grid-cols-2 grid-cols-1 gap-5">
               {/* PHONE */}
 
               <a

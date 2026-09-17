@@ -160,12 +160,6 @@ export default function GallerySection() {
               {currentMonthImages.length}
             </h2>
           </div>
-
-          <div className="rounded-2xl border border-gray-200 bg-white p-5">
-            <p className="text-sm text-gray-500">Latest Upload</p>
-
-            <h2 className="mt-2 text-lg font-bold text-gray-900">Today</h2>
-          </div>
         </div>
 
         {/* Search */}

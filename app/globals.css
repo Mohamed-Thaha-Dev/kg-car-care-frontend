@@ -20,6 +20,12 @@
   --color-primary: var(--primary);
 }
 
+@layer base {
+  ::selection {
+    @apply bg-red-500 text-white;
+  }
+}
+
 body {
   background-color: var(--background);
   color: var(--color-foreground);

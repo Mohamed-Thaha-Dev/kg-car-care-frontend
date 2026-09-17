@@ -23,7 +23,7 @@ export default function Footer() {
               BRAND
           ================================= */}
           <div className="footer-reveal lg:col-span-1">
-            <Link href="/" className="group inline-block">
+            <Link href="/" className="group inline-block bg-sub-background rounded-3xl p-2">
               <Image
                 src="/logo/logo.webp"
                 alt="KG Car Care Service Logo"
