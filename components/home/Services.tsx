@@ -201,8 +201,6 @@ export default function Service() {
         onUpdate: () => {
           if (!isMounted) return;
           const currentFrame = Math.round(frameObject.frame);
-          console.log("onUpdate fired, frame:", currentFrame); // 👈 temp debug
-
           currentFrameRef.current = currentFrame;
 
           // Load current + nearby frames

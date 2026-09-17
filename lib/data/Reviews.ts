@@ -12,7 +12,7 @@ export const reviews = [
     name: "Rahul S",
     username: "Google Review",
     body: "Really impressed with the transformation. The team was professional, the process was smooth and the final result exceeded my expectations.",
-    rating: 5,
+    rating: 4,
     date: "1 month ago",
   },
   {
@@ -28,7 +28,7 @@ export const reviews = [
     name: "Vijay Kumar",
     username: "Google Review",
     body: "The detailing quality was excellent. Every small part of the car was taken care of and the final finish was outstanding.",
-    rating: 5,
+    rating: 4,
     date: "2 months ago",
   },
   {
@@ -44,7 +44,7 @@ export const reviews = [
     name: "Karthik M",
     username: "Google Review",
     body: "Amazing experience from start to finish. My car looks almost brand new. Great workmanship and excellent customer service.",
-    rating: 5,
+    rating: 4,
     date: "3 months ago",
   },
   {
@@ -60,7 +60,7 @@ export const reviews = [
     name: "Praveen S",
     username: "Google Review",
     body: "Great service, friendly staff and excellent results. My car came back looking cleaner and better than I expected.",
-    rating: 5,
+    rating: 4,
     date: "4 months ago",
   },
 ];

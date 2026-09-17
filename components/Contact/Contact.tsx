@@ -3,7 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Phone, MapPin, Clock3 } from "lucide-react";
+import { Phone, MapPin, Clock3, Mail } from "lucide-react";
 import ContactForm from "../Common/ContactForm";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -301,7 +301,7 @@ export function ContactSection() {
                     text-white/60
                   "
                 >
-                  <MapPin className="h-4 w-4" />
+                  <Mail className="h-4 w-4" />
                 </div>
 
                 <div>
@@ -313,59 +313,15 @@ export function ContactSection() {
                       text-white/30
                     "
                   >
-                    Branch 1
+                    Email
                   </p>
 
                   <p className="mt-1 text-sm text-white">
-                    Coimbatore, Tamil Nadu
+                    Kgcarcare26@gmail.com
                   </p>
                 </div>
               </div>
-              <div
-                className="
-                  contact-meta
-                  flex
-                  items-center
-                  gap-5
-                  border-t
-                  border-white/10
-                  py-5
-                "
-              >
-                <div
-                  className="
-                    flex
-                    h-11
-                    w-11
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-full
-                    border
-                    border-white/10
-                    text-white/60
-                  "
-                >
-                  <MapPin className="h-4 w-4" />
-                </div>
-
-                <div>
-                  <p
-                    className="
-                      text-[9px]
-                      uppercase
-                      tracking-[0.25em]
-                      text-white/30
-                    "
-                  >
-                    Branch 2
-                  </p>
-
-                  <p className="mt-1 text-sm text-white">
-                    Coimbatore, Tamil Nadu
-                  </p>
-                </div>
-              </div>
+           
 
               {/* HOURS */}
 

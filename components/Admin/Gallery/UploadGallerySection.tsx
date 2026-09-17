@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import gsap from "gsap";
+
 import {
   Upload,
   Image as ImageIcon,
@@ -29,7 +29,6 @@ export default function AdminGallerySection() {
   // Handle image selection
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    console.log("this is ", file);
 
     if (!file) return;
 
@@ -52,7 +51,6 @@ export default function AdminGallerySection() {
 
     const imagePreview = URL.createObjectURL(file);
     setPreview(imagePreview);
-    console.log("this is img", imagePreview);
   };
 
   // Remove selected image
@@ -89,11 +87,11 @@ export default function AdminGallerySection() {
       // Get JWT Token
       const token = localStorage.getItem("token");
 
-      if (!token) {
-        toast.error("You are not authorized. Please login again.");
-        setLoading(false);
-        return;
-      }
+      // if (!token) {
+      //   toast.error("You are not authorized. Please login again.");
+      //   setLoading(false);
+      //   return;
+      // }
       const formData = new FormData();
 
       formData.append("title", title);

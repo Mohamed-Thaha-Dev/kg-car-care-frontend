@@ -19,9 +19,7 @@
   --color-sub-background: var(--sub-background);
   --color-primary: var(--primary);
 }
-html {
-  scroll-behavior: smooth;
-}
+
 body {
   background-color: var(--background);
   color: var(--color-foreground);
@@ -29,6 +27,9 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
+html {
+  scroll-behavior: smooth;
+} 
 
 .font-heading {
   font-family: var(--font-bebas);
@@ -36,4 +37,10 @@ body {
 
 .font-body {
   font-family: var(--font-inter);
+}
+
+@media (min-width: 769px) {
+  html {
+    scroll-behavior: auto;
+  }
 }

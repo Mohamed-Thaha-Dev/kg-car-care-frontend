@@ -94,7 +94,6 @@ export default function AboutHero() {
             end: "bottom top",
             scrub: true,
             invalidateOnRefresh: true,
-
           },
         });
       }
@@ -140,18 +139,20 @@ export default function AboutHero() {
             fill
             sizes="100vw"
             priority
-            className="object-cover object-[70%] md:object-[80%]"
+            className="object-cover object-[70%] md:object-[80%] opacity-90"
           />
         </div>
 
         {/* Left Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" /> */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1c1c1c] via-[#1c1c1c]/60 to-[#1c1c1c]/40" />
+        {/* <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#1a0808] via-[#1a0808]/60 to-[#1a0808]/40" /> */}
 
         {/* Bottom Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1c]/60 via-transparent to-[#1c1c1c]/40" />
 
         {/* Overall subtle dark layer */}
-        <div className="absolute inset-0 bg-black/10" />
+        {/* <div className="absolute inset-0 bg-black/10" /> */}
       </div>
 
       {/* =========================
@@ -173,17 +174,13 @@ export default function AboutHero() {
           {/* Title */}
 
           <h1 className="mb-8 font-heading text-5xl font-bold leading-[0.95] text-white sm:text-6xl md:text-7xl lg:text-8xl">
-            <span className="hero-title-line block">
-              Driven by Passion.
-            </span>
+            <span className="hero-title-line block">Driven by Passion.</span>
 
             <span className="hero-title-line mr-2 text-zinc-400">
               Powered by
             </span>
 
-            <span className="hero-title-line text-primary">
-              Precision.
-            </span>
+            <span className="hero-title-line text-primary">Precision.</span>
           </h1>
 
           {/* Description */}
@@ -197,11 +194,7 @@ export default function AboutHero() {
           {/* Buttons */}
 
           <div className="hero-buttons mt-10 flex gap-4">
-            <Button
-              title="Book a Service"
-              href="/contact"
-              variant="primary"
-            />
+            <Button title="Book a Service" href="/contact" variant="primary" />
 
             <Button
               title="Explore Services"

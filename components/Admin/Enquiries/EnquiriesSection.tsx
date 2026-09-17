@@ -308,7 +308,7 @@ export default function EnquiriesPage() {
       {/* MOBILE / DESKTOP CONTENT */}
       {/* ================================================= */}
 
-      <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+      <div className="enquiry-item overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
         <div className="min-h-[600px] lg:grid lg:grid-cols-[360px_1fr]">
           {/* ================================================= */}
           {/* LEFT - ENQUIRY LIST */}

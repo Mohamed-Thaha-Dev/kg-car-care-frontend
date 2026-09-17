@@ -110,9 +110,9 @@ export default function ServicesHero() {
     >
       {/* Background */}
       <div className="absolute inset-0">
-        <div ref={imgRef}   
+        <div
+          ref={imgRef}
           className="absolute inset-0 h-full w-full md:-inset-[10%] md:h-[120%] md:w-[120%]"
-        
         >
           <Image
             src="/home/service-hero.webp"
@@ -120,13 +120,14 @@ export default function ServicesHero() {
             fill
             sizes="100vw"
             priority
-            className="object-cover opacity-70"
+            className="object-cover opacity-30"
           />
         </div>
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#1c1c1c] via-[#1c1c1c]/60 to-[#1c1c1c]/40" />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60  to-transparent " />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-black/60  to-transparent " /> */}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-black/40 to-black/20" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-black/40 to-black/20" /> */}
       </div>
 
       {/* Content */}

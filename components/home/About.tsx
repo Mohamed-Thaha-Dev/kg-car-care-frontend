@@ -289,7 +289,7 @@ export default function AboutSection() {
               {/* CTA */}
 
               <div className="about-reveal mt-10">
-                <ArrowButton title="Explore Our Services" href="/service" />
+                <ArrowButton title="Explore Our Services" href="/services" />
               </div>
             </div>
           </div>
@@ -485,7 +485,7 @@ export default function AboutSection() {
           </div>
 
           <div className="lg:mb-5">
-            <Button title="BOOK A SERVICE" href="/services" />
+            <Button title="BOOK A SERVICE" href="/contact" />
           </div>
         </div>
       </div>

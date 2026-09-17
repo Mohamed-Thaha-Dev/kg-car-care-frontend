@@ -80,7 +80,7 @@ export default function Sidebar() {
             KG Car Services
           </h1> */}
           <Image
-            src="/logo/logo.png"
+            src="/logo/logo.webp"
             alt="KG Car Care Logo"
             width={200}
             height={100}

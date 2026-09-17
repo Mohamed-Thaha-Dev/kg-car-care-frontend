@@ -62,6 +62,7 @@ export default function AboutWhyWeBuilt() {
               src="/images/about-img.webp"
               alt="KG Car Service technicians at work"
               fill
+              sizes="(max-width: 768px) 100vw, 40vw"
               className="object-cover"
             />
           </div>

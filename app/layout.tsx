@@ -12,7 +12,7 @@ const bebasNeue = Bebas_Neue({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
 });
 export const metadata: Metadata = {
   title: "KG Car Care",
@@ -23,6 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${bebasNeue.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">

@@ -327,10 +327,10 @@ useEffect(() => {
       ============================================ */}
 
       <header className="fixed left-0 top-0 z-[100] w-full bg-black/10 backdrop-blur-xl">
-        <div className="flex h-24 items-center justify-between px-6 md:px-10 lg:px-14">
+        <div className="flex h-24 items-center justify-between px-6 md:px-10 lg:px-20">
           {/* LOGO */}
           <Link href="/" className="relative z-[110] flex items-center">
-            <div className="relative md:w-40 md:h-20 w-30 h-20">
+            <div className="relative md:bg-sub-background rounded-3xl md:w-35 md:h-20 w-30 h-20">
               <Image
                 src="/logo/logo.webp"
                 alt="Company Logo"
@@ -401,7 +401,7 @@ useEffect(() => {
 
         <div
           ref={panelRef}
-          className="absolute right-0 top-0 h-full w-full overflow-hidden bg-[#111111] text-white lg:w-[35%]"
+          className="absolute right-0 top-0 h-full w-full overflow-hidden bg-sub-background text-white lg:w-[35%]"
         >
           {/* BACKGROUND SHAPES */}
 
@@ -424,21 +424,21 @@ useEffect(() => {
 
             <div
               ref={addShapeRef}
-              className="absolute bottom-[15%] left-[15%] h-72 w-72 rounded-full border border-white/10"
+              className="absolute bottom-[15%] left-[15%] h-72 w-72 rounded-full border border-muted/40"
             />
 
             {/* Shape 4 */}
 
             <div
               ref={addShapeRef}
-              className="absolute bottom-[5%] right-[5%] h-80 w-80 rounded-[40%] bg-[#C9A227]/10 blur-3xl"
+              className="absolute bottom-[5%] right-[5%] h-80 w-80 rounded-[40%] bg-primary/10 blur-3xl"
             />
 
             {/* Shape 5 */}
 
             <div
               ref={addShapeRef}
-              className="absolute left-[40%] top-[45%] h-[500px] w-[2px] rotate-45 bg-[#C9A227]/20"
+              className="absolute left-[40%] top-[45%] h-[500px] w-[2px] rotate-45 bg-primary/20"
             />
           </div>
 
@@ -448,11 +448,11 @@ useEffect(() => {
             {/* TOP */}
         
             <div className="flex items-center justify-between">
-              <span className="text-xs uppercase tracking-[0.3em] text-white/40">
+              <span className="text-xs uppercase tracking-[0.3em] text-muted/60">
                 Navigation
               </span>
 
-              <span className="text-xs uppercase tracking-[0.3em] text-[#C9A227]">
+              <span className="text-xs uppercase tracking-[0.3em] text-primary">
                 KG / 01
               </span>
             </div>
@@ -471,7 +471,7 @@ useEffect(() => {
                       type="button"
                       ref={addMenuLinkRef}
                       onClick={() => handleNavigation(item.href)}
-                      className="group flex w-full cursor-pointer items-center justify-between border-b border-white/10 py-4 text-left text-4xl font-medium tracking-tight transition-colors duration-300 hover:text-primary md:py-5 font-heading md:text-6xl lg:text-5xl"
+                      className="group flex w-full cursor-pointer text-muted items-center justify-between border-b border-white/10 py-4 text-left text-4xl font-medium tracking-tight transition-colors duration-300 hover:text-primary lg:py-5 font-heading   lg:text-5xl"
                     >
                       <span>{item.title}</span>
 

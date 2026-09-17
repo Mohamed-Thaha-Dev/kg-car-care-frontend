@@ -112,7 +112,7 @@ export default function KGCarTestimonials() {
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-8 bg-primary" />
 
-              <span className="text-xs  uppercase font-semibold tracking-[0.3em] text-muted/50">
+              <span className="text-xs testimonial-label uppercase font-semibold tracking-[0.3em] text-muted/50">
                 Customer Reviews
               </span>
             </div>
@@ -205,10 +205,10 @@ export default function KGCarTestimonials() {
             {/* Rating */}
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <span className="sm:text-xl text-sm font-semibold text-white">5.0</span>
+                <span className="sm:text-xl text-sm font-semibold text-white">4.5</span>
 
                 <div className="flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, index) => (
+                  {Array.from({ length: 4 }).map((_, index) => (
                     <Star
                       key={index}
                       className="

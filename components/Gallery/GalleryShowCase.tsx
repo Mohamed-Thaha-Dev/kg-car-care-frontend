@@ -23,10 +23,9 @@ export default function GalleryShowCase() {
           `${process.env.NEXT_PUBLIC_API_URL}/api/gallery/allimages`,
         );
         setGalleryItems(response.data.data);
-        console.log(response);
+        
       } catch (err:any) {
         toast.error(err.message)
-        console.log("this is gallry err",err.message);
       } finally {
         setIsLoading(false);
       }
