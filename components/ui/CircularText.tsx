@@ -117,7 +117,7 @@ const CircularText: React.FC<CircularTextProps> = ({
         rounded-full
         text-center
         font-black
-        text-white
+        text-foreground
         origin-center
         ${className}
       `}

@@ -247,11 +247,12 @@ export function Hero() {
           OVERLAY
       ====================================== */}
 
-      {/* <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/60 to-black/40" /> */}
+{/* <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/60 to-black/40" /> */}
 {/* <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#071522]/95 via-[#071522]/65 to-[#071522]/35" /> */}
 {/* <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#1a0808] via-[#1a0808]/60 to-[#1a0808]/40" /> */}
 {/* <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0d1420] via-[#0d1420]/60 to-[#0d1420]/40" /> */}
-<div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#1c1c1c] via-[#1c1c1c]/60 to-[#1c1c1c]/40" />
+{/* <div className="absolute inset-0 -z-10 md:bg-gradient-to-r from-[#1c1c1c] via-[#1c1c1c]/50 to-[#1c1c1c]/30 bg-gradient-to-r from-[#1c1c1c] via-[#1c1c1c]/80 to-[#1c1c1c]/30" /> */}
+<div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#1c1c1c] via-[#1c1c1c]/80 to-[#1c1c1c]/30 md:via-[#1c1c1c]/50" />
       {/* ======================================
           CONTENT
       ====================================== */}

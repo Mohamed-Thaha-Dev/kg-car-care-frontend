@@ -37,7 +37,7 @@ export default function Banner() {
     >
       {/* Background Image */}
       <Image
-        src="/images/banner-img.jpeg"
+        src="/images/banner-img.webp"
         alt="Car Care"
         fill
         sizes="100vw"

@@ -4,9 +4,9 @@ export const Experience = [
     number: "01",
     value: "12+",
     description: "Years of automotive experience",
-    cardClassName: "bg-neutral-950 text-neutral-500",
-    numberClassName: "text-primary",
-    valueClassName: "text-white",
+    cardClassName: "bg-white text-neutral-950",
+    numberClassName: "text-neutral-500",
+    valueClassName: "text-neutral-950",
   },
   {
     title: "Our Promise",
@@ -26,5 +26,4 @@ export const Experience = [
     numberClassName: "text-neutral-500",
     valueClassName: "text-neutral-950",
   },
-  
 ];

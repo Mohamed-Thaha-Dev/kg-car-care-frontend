@@ -439,7 +439,7 @@ export default function AboutSection() {
     rounded-full
    lg:border
     border-primary
-    lg:bg-[#0a0a0a]
+    lg:bg-primary
   "
               >
                 <CircularText
@@ -449,7 +449,7 @@ export default function AboutSection() {
                   size={55}
                 />
 
-                <div className="absolute flex h-[32%] w-[32%] items-center justify-center rounded-full bg-primary">
+                <div className="absolute flex h-[32%] w-[32%] items-center justify-center rounded-full bg-foreground">
                   <span className="text-[clamp(8px,2vw,12px)] font-bold text-black">
                     KG
                   </span>

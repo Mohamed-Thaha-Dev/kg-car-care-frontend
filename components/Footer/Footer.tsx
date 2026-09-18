@@ -183,7 +183,7 @@ export default function Footer() {
               NAVIGATION
           ================================= */}
           <div className="footer-reveal">
-            <p className="mb-6 text-[12px] uppercase tracking-[0.25em] text-primary">
+            <p className="mb-6 text-[12px] uppercase tracking-[0.25em] font-bold text-foreground">
               Navigation
             </p>
 
@@ -239,7 +239,7 @@ export default function Footer() {
               SERVICES
           ================================= */}
           <div className="footer-reveal">
-            <p className="mb-6 text-[12px] uppercase tracking-[0.25em] text-primary">
+            <p className="mb-6 text-[12px] uppercase tracking-[0.25em] font-bold text-foreground">
               Address
             </p>
             <div className="flex flex-col gap-4">
@@ -328,7 +328,7 @@ export default function Footer() {
               CONTACT
           ================================= */}
           <div className="footer-reveal">
-            <p className="mb-6 text-[12px] uppercase tracking-[0.25em] text-primary">
+            <p className="mb-6 text-[12px] uppercase tracking-[0.25em] font-bold text-foreground">
               Get In Touch
             </p>
 
