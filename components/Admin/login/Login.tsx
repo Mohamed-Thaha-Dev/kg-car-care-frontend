@@ -141,10 +141,10 @@ export default function Login() {
           >
             {/* Glass Highlight */}
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
-            <div ref={logoRef} className="mb-5 flex justify-center">
+            <div ref={logoRef} className="mb-5 flex justify-center bg-foreground w-40 mx-auto rounded-3xl p-3">
               <Link href="/">
                 <Image
-                  src="/logo/logo.png"
+                  src="/logo/logo.webp"
                   alt="KG Car Care"
                   width={170}
                   height={70}
