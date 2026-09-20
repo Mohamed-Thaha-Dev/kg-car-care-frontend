@@ -30,7 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <Toaster position="top-right" reverseOrder={false} />
         {children}
-        <SpeedInsights/>
+        <SpeedInsights />
       </body>
     </html>
   );
